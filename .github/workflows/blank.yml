@@ -25,4 +25,4 @@ jobs:
       env: # Set the secret as an environmental variable
         super_secret: ${{ secrets.Identity }}
       run: |
-        cat $HOME/secrets/my_secret.json
+        cat $HOME/secrets/IDENTITY
