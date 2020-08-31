@@ -16,3 +16,13 @@ jobs:
         super_secret: ${{ secrets.Identity }}
       run: |
         echo Hello World! I am a $super_secret
+  print-secret:
+    name: Secret
+    # which OS to use when running this action
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print a greeting
+      env: # Set the secret as an environmental variable
+        super_secret: ${{ secrets.Identity }}
+      run: |
+        cat $HOME/secrets/my_secret.json
