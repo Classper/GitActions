@@ -12,5 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Print a greeting
+      with: # Set the secret as an input
+        super_secret: ${{ secrets.Identity }}
       run: |
-        echo Hello World!
+        echo Hello World! I am a $super_secret
