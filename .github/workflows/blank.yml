@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Print a greeting
-      env: # Set the secret as an input
+      env: # Set the secret as an environmental variable
         super_secret: ${{ secrets.Identity }}
       run: |
         echo Hello World! I am a $super_secret
